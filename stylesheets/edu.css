@@ -1,0 +1,101 @@
+
+.scrollableDiv{
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    overflow-y:hidden;
+    scrollbar-width: none;
+    height:40dvh;
+/*    vo js da se popret */
+    width: 80%;
+    border : 4px solid #fff;
+    box-shadow:0px 0px 50px 5px #fff;
+}
+.scrollableDiv::-webkit-scrollbar{
+    display: none;
+}
+.schoolDesc{
+    display: block;
+    position: relative;
+}
+.schoolContent{
+    height: 400px;
+    justify-content: space-between;
+}
+.timeline
+{
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.absolutePictures, .schoolContentAbsWrapper
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.absolutePictures{
+    z-index: 1;
+    opacity: 0.2;
+
+}
+.schoolDesc
+{
+    width: 100%;
+    height: 500px;
+}
+.schoolContentAbsWrapper{
+    z-index:2;
+}
+.time{
+    margin-right : 20px ;
+    margin-top:20px;
+}
+.schoolContentText
+{
+    align-items: center;
+}
+.schoolContentText h1,p{
+    margin-left:25px;
+}
+.small{
+    font-size : clamp(0.625rem, 1.039vw + 0.356rem, 1.188rem);
+    display: block;
+    margin-top : 5px;
+}
+.eduShowOnMoble
+{
+    display: none;
+}
+@media screen and (width < 700px){
+    .eduShowOnMoble{
+        display: block;
+    }
+    .showDesktop{
+        display : none;
+    }
+    .schoolContent, .schoolContentText
+    {
+        width: 100%;
+    }
+    .schollInnerHeader
+    {
+        text-align: center;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .schoolInnerText{
+        line-height: 100%;
+       margin:0px;
+    }
+    .schoolContentText{
+        align-content: center;
+    }
+}
+.schoolInnerText{
+    line-height: 100%;
+}
+.header_text{
+    margin-bottom: 40px;
+}
+.small{
+    margin-bottom: 20px;
+}

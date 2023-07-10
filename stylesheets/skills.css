@@ -1,0 +1,155 @@
+.sf_clc_see,
+.skills_shw_mb {
+    display: none;
+}
+
+.skills {
+    align-items: center;
+}
+
+.skills>h1 {
+    margin-bottom: var(--spc_btw_h_cont);
+}
+
+.sft_skill {
+    width: 100%;
+}
+
+.sft_skill ol {
+    row-gap: max(2vw, 2vh);
+    padding-left : 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    flex-grow: 1;
+    box-sizing: border-box  ;
+}
+
+.sft_skill ol li {
+    width: max-content;
+}
+
+.sft_skill .dis_des {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1000;
+    border-left: var(--border_style);
+}
+
+.sf_desc {
+    width: 80%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.sf_item {
+    font-weight: bolder;
+    font-size: clamp(1.5rem, 2.309vw + 0.902rem, 2.75rem);
+}
+
+
+@media screen and (width < 700px) {
+
+    .dis_des .inner_text.sf_desc {
+        border-top: var(--border_style) ;
+        padding-top: 2.5em ;
+        width: 100% ;
+    }
+
+    .dis_des {
+        width: 80%;
+        padding: 0px;
+    }
+}
+
+@media screen and (width < 500px) {
+    .sf_desc_txt {
+        display: none;
+    }
+     .skills_shw_mb {
+        display: block ;
+        font-size: 13px;
+        margin-top: 0.9em;
+    }
+}
+
+.prog_skll {
+    align-items: center;
+}
+
+.prog_skll>h1 {
+    margin: var(--spc_btw_h_cont) 0px;
+}
+
+.logo_prog_lang {
+    width: 70vw;
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
+.logo_prog_lang img {
+    margin:0px 10px ;
+    object-fit: contain;
+    width: 10vw;
+    flex-grow: 1;
+    aspect-ratio: 1/2;
+    min-width: 96px;
+}
+
+@keyframes dissapear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes appearLogos {
+    from{
+        transform : translateX(0px);
+    }to{
+    transform : translateX(var(--windowWidth));
+         }
+}
+.apperingLogo{
+    animation : appearLogos 1.5s 1 reverse ;
+}
+
+.descLogosProg{
+    display: none;
+}
+.skills p::selection,
+.skills li::selection{
+    background: hsl(270deg,50%,40%);
+}
+.skills li::first-letter{
+    color:hsl(270deg,50%,40%);
+    font-weight: bolder;
+}
+.skills p{
+    padding:10px;
+    border:2px solid #fff;
+}
+#noClick{
+    border:none;
+}
+#contact-small{
+    display: block;
+    margin-top:20px;
+    font-size: 20px;
+}
+@media (width < 400px){
+    #contact-small{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,57 @@
+.nav{
+    width: 40%;
+    height:500px;
+}
+.nav ol{
+    overflow-x:hidden;
+    margin: 0px;
+}
+.Navrelative{
+    width:100%;
+    position:relative;
+}
+.ide{
+    /*height: 20dvh;*/
+    background: hsl(222deg, 14%, 28%);
+    border-radius:20px ;
+    position:absolute;
+    z-index : 1 ;
+}
+.nav li::marker{
+    color : hsl(4deg, 95%,38%) ;
+    font-family: cursive;
+    font-size: clamp(1rem, 0.9vw + 0.831rem, 1.563rem);
+}
+.nav li {
+    width: 100%;
+    text-align: left;
+    padding-left:20px;
+}
+.nav li::after
+{
+    content : '';
+    width:99%;
+    height:2px;
+    background-color :#fff;
+    position:absolute;
+    z-index:2 ;
+    transform: translateY(var(--distaceY_li));
+    right: 4px;
+}
+
+.navAbs{
+    z-index: 2;
+    position:absolute;
+}
+.moveInAbove{
+    animation: slide_in_above 2s ease-in-out 0ms 1 normal forwards;
+}
+@keyframes slide_in_above {
+    from{
+        transform:translateY(-200px);
+    }
+    to{
+        transform:translateY(0px);
+    }
+
+}

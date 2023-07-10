@@ -1,0 +1,80 @@
+:root{
+    --border_style : 3px solid white;
+    --spc_btw_h_cont : 2.7em ;
+    --spcBtwIHCont : 2em;
+    --skew_val : -20deg;
+    --distaceY_li : 64px;
+    --distanceX_li : 20px;
+    --inner_text_size :  clamp(1rem, 0.9vw + 0.831rem, 1.563rem);
+    --heightShadow: 20px;
+    --WidthShadow : 20px;
+    --push_left : 20px;
+    --rotate : 10deg ;
+    --windowWidth: 100px;
+}
+span{
+    display: inline-block;
+}
+body{
+    margin: 0px;
+    row-gap: 12rem;
+    background: #1A2421;
+    color : #dcdcdc;
+    overflow-x:hidden;
+}
+section{
+    margin-bottom: 20dvh;
+}
+section:last-of-type{
+    margin-bottom:0px;
+}
+.full_allign{
+    align-items: center;
+    justify-content: center;
+}
+/* cesto ke se poftorvat poziiciive  */
+.dis_R{
+    display:flex;
+    flex-flow:row wrap;
+}
+.dis_C{
+    display: flex;
+    flex-flow:column wrap;
+}
+.separe_equal{
+    width:50%;
+}
+.column_equal{
+    width: 100%;
+}
+.inner_text{
+    font-family: cursive;
+    font-size:var(--inner_text_size);
+    line-height: calc(10vw/10 + 5vh );
+}
+.header_text{
+    font-family: Verdana, sans-serif;
+    font-size:clamp(1.438rem, 3.118vw + 0.631rem, 3.125rem);
+}
+.inline_header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:clamp(1.313rem, 2.425vw + 0.685rem, 2.625rem);
+}
+.inner_text,
+.header_text,
+.inline_header{
+    text-align: center;
+    overflow-wrap : break-word;
+}
+/* znachi za 8 i za 9 */
+::-webkit-scrollbar{
+    scroll-behavior: smooth;
+}
+::-moz-viewport-scroll{
+    scroll-behavior: smooth;
+}
+@media (width < 500px){
+    .welcome{
+        height: 50vh;
+    }
+}

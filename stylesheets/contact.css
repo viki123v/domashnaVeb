@@ -1,0 +1,192 @@
+.socialMedia{
+    border-radius: 100%;
+   height: 100%;
+    width:12%;
+}
+img[alt^="avatar"]{
+    width: 80%;
+}
+.padding{
+    width:92%;
+    padding: 50px;
+}
+
+form,
+.images {
+    row-gap: 20px;
+    margin-bottom:20px;
+     border:4px solid #fff;
+    border-top : none;
+ }
+.images{
+    width:30%;
+    margin-top : 20px ;
+    flex-grow : 1 ;
+    border-left : none;
+}
+form{
+    width:50%;
+    padding: 40px;
+    column-gap: 20px;
+    display : grid;
+    flex-grow: 1;
+    grid-template-columns: repeat( 2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    align-content: space-between;
+}
+.area{
+    grid-row : 3/5;
+    grid-column: 1/3;
+}
+.area,
+.input,
+.inputFor{
+    transform:skew(var(--skew_val));
+}
+input{
+    margin-left:30px;
+    width: 95%;
+}
+input{
+    background: transparent;
+    color:#fff;
+    height: max(2vw,4vh);
+}
+label:first-child{
+    text-align: left;
+}
+textarea{
+    width: 92%;
+    height: 73%;
+    background: transparent;
+    color:white;
+    margin-left:2vw;
+}
+form,
+.images{
+    margin-top : 20px;
+}
+label
+{
+    margin-bottom : 10px ;
+}
+input,
+textarea
+{
+  font-size : clamp(1.125rem, 1.155vw + 0.826rem, 1.75rem);
+}
+@media screen and (width < 700px ) {
+    .padding {
+        overflow: hidden;
+        margin: 20px 0px;
+        width: 80%;
+        border: 4px solid #fff;
+        padding: 20px;
+    }
+
+    form,
+    .images {
+        border: none;
+        width: 80%;
+    }
+
+    form {
+        order: 2;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .images {
+        width : 100% ;
+        order: 1;
+    }
+
+    input {
+        width: 90%;
+    }
+    div:not([class])
+    {
+        position : relative ;
+    }
+    div:not([class])::before
+    {
+        right : 50% ;
+        transform : rotate(45deg );
+    }
+    div:not([class])::before,
+    div:not([class])::after
+    {
+        width : 102% ;
+        height : 4px ;
+        content : '';
+        position : absolute;
+        top : calc(50% + 155px);
+        background : #fff;
+
+    }
+    div:not([class])::after
+    {
+       left : 50% ;
+        transform : rotate(-45deg) ;
+    }
+    label,
+    input
+    {
+        margin-left : 0px ;
+    }
+    .contact{
+        align-items: center;
+    }
+}
+#github:hover::before{
+    content :"viki123v";
+    width: max-content;
+    height: max-content;
+    position :absolute;
+    background: whitesmoke;
+}
+.contact .podnesi{
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    padding:5px;
+    text-decoration: none;
+    transform :skew(var(--skew_val));
+    margin-top : 20px ;
+}
+.underRow{
+    width: 80%;
+    height: 10%;
+    justify-content: space-between;
+    margin-bottom:40px;
+}
+.socialMedia{
+    width: 30%;
+    height: 100%;
+}
+.logosSocialMedia{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+#github:hover:after,
+#likedin:hover:after,
+#intagram:hover:after{
+    height: 2px;
+    background: hsl(270deg,50%,40%) ;
+    padding:10px;
+    border-radius: 20px;
+}
+#github:hover:after{
+    content:"viki123v";
+}
+#intagram:hover:after{
+    content: "hristovski__";
+}
+#likedin:hover:after{
+    content:"Viktor_Hristovski";
+}
+.contact{
+    margin-top:0px;
+}
+/*to so pseudo elementite */

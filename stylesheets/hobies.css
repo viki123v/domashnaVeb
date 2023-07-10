@@ -1,0 +1,83 @@
+.wrapperAllHobies{
+    width: 80%;
+}
+.wrapperAllHobies::after{
+    content :"";
+    background: #fff;
+    width: 70%;
+    height: 5px;
+    position : absolute;
+    transform : translateY(20px);
+}
+.relativeHolder{
+    position: relative;
+    width: 30%;
+    border: 5px solid #fff;
+    border-radius: 32px;
+    background: #4b0082;
+}
+.HobiesAbsolute{
+    position:absolute;
+    width: 100%;
+}
+.hobiesImages{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#relative1,#relative3{
+    z-index: 1;
+}
+#relative2{
+    z-index:2;
+}
+#relative1{
+    --rotate: -10deg;
+    transform:rotate(-10deg);
+}
+#relative3{
+    --rotate: 10deg;
+    transform:rotate(var(--rotate));
+}
+div[id*="relative"]{
+    transition: transform 500ms;
+}
+div[id*="relative"]:hover
+{
+    transform:scale(1.3) !important;
+    z-index : 3 !important;
+}
+.fokus{
+    transform:scale(1.3) !important;
+    z-index:3 !important;
+}
+.discale{
+    transform:scale(1) rotate(var(--rotate)) !important;
+    z-index:  1;
+}
+.hobiesDescription{
+    margin: 20px;
+    margin-right: 0px;
+}
+@media screen and (width < 730px){
+    .wrapperAllHobies::after{
+        display : none;
+    }
+    .hobiesDescription{
+        display: none;
+    }
+    .hobiesImages{
+        border-radius: 20px;
+    }
+    .wrapperAllHobies{
+        width: 100%;
+    }
+}
+@keyframes slide_left {
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(var(--push_left));
+    }
+}
